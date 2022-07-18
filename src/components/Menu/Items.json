@@ -1,0 +1,280 @@
+[{
+    "id": 1,
+    "name": "Men",
+    "category": [
+      {
+        "name": "Featured",
+        "subCategories": [
+          { "name": "New Session" },
+          { "name": "Realeses" },
+          { "name": "Top Sellers" },
+          { "name": "Sale" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "Trainers" },
+          { "name": "Slides and Sandals" },
+          { "name": "Running" },
+          { "name": "Gym and training" },
+          { "name": "Sports" },
+          { "name": "Shoes" },
+          { "name": "Tennis" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "T-shirts and Tops" },
+          { "name": "Shorts" },
+          { "name": "Trousers" },
+          { "name": "Joggers" },
+          { "name": "Jackets" },
+          { "name": "Hoddies" },
+          { "name": "Swimwear" }
+        ]
+      },
+      {
+        "name": "Acessories",
+        "subCategories": [
+          { "name": "Socks" },
+          { "name": "Underwear" },
+          { "name": "Headwear" },
+          { "name": "Sunglasses" },
+          { "name": "Gloves and Scarves" }
+        ]
+      },
+      {
+        "name": "Sports",
+        "subCategories": [
+          { "name": "Gym and Training" },
+          { "name": "Running" },
+          { "name": "Football" },
+          { "name": "basketball" },
+          { "name": "Swimming" },
+          { "name": "Cycling" },
+          { "name": "Tennis" }
+        ]
+      }
+    ]
+},
+ {
+    "id": 2,
+    "name": "Women",
+    "category": [
+      {
+        "name": "Featured",
+        "subCategories": [
+          { "name": "New Session" },
+          { "name": "Realeses" },
+          { "name": "Top Sellers" },
+          { "name": "Sale" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "Trainers" },
+          { "name": "Slides and Sandals" },
+          { "name": "Running" },
+          { "name": "Gym and training" },
+          { "name": "Sports" },
+          { "name": "Shoes" },
+          { "name": "Tennis" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "T-shirts and Tops" },
+          { "name": "Shorts" },
+          { "name": "Trousers" },
+          { "name": "Joggers" },
+          { "name": "Jackets" },
+          { "name": "Hoddies" },
+          { "name": "Swimwear" }
+        ]
+      },
+      {
+        "name": "Acessories",
+        "subCategories": [
+          { "name": "Socks" },
+          { "name": "Underwear" },
+          { "name": "Headwear" },
+          { "name": "Sunglasses" },
+          { "name": "Gloves and Scarves" }
+        ]
+      },
+      {
+        "name": "Sports",
+        "subCategories": [
+          { "name": "Gym and Training" },
+          { "name": "Running" },
+          { "name": "Football" },
+          { "name": "basketball" },
+          { "name": "Swimming" },
+          { "name": "Cycling" },
+          { "name": "Tennis" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Kids",
+    "category": [
+      {
+        "name": "Featured",
+        "subCategories": [
+          { "name": "New Session" },
+          { "name": "Realeses" },
+          { "name": "Top Sellers" },
+          { "name": "Sale" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "Trainers" },
+          { "name": "Slides and Sandals" },
+          { "name": "Running" },
+          { "name": "Gym and training" },
+          { "name": "Sports" },
+          { "name": "Shoes" },
+          { "name": "Tennis" }
+        ]
+      },
+      {
+        "name": "Footwear",
+        "subCategories": [
+          { "name": "T-shirts and Tops" },
+          { "name": "Shorts" },
+          { "name": "Trousers" },
+          { "name": "Joggers" },
+          { "name": "Jackets" },
+          { "name": "Hoddies" },
+          { "name": "Swimwear" }
+        ]
+      },
+      {
+        "name": "Acessories",
+        "subCategories": [
+          { "name": "Socks" },
+          { "name": "Underwear" },
+          { "name": "Headwear" },
+          { "name": "Sunglasses" },
+          { "name": "Gloves and Scarves" }
+        ]
+      },
+      {
+        "name": "Sports",
+        "subCategories": [
+          { "name": "Gym and Training" },
+          { "name": "Running" },
+          { "name": "Football" },
+          { "name": "basketball" },
+          { "name": "Swimming" },
+          { "name": "Cycling" },
+          { "name": "Tennis" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sports",
+    "category": [
+      {
+        "name": "Football",
+        "subCategories": [
+          { "name": "Boots" },
+          { "name": "Clubs" },
+          { "name": "Federations" },
+          { "name": "Clothing" },
+          { "name": "Acessories" }
+        ]
+      },
+      {
+        "name": "Running",
+        "subCategories": [
+          { "name": "Shoes" },
+          { "name": "Clothing" },
+          { "name": "Acessories" }
+        ]
+      },
+      {
+        "name": "Outdoor",
+        "subCategories": [
+          { "name": "Shoes" },
+          { "name": "Clothing" },
+          { "name": "Acessories" },
+          { "name": "Hiking" },
+          { "name": "Strength training" },
+          { "name": "Mountain biking" },
+          { "name": "Climbing" },
+          { "name": "Winter Sports" }
+        ]
+      },
+      {
+        "name": "Gym and Trainning",
+        "subCategories": [
+          { "name": "Shoes" },
+          { "name": "Clothing" },
+          { "name": "Acessories" }
+        ]
+      },
+      {
+        "name": "Other Sports",
+        "subCategories": [
+          { "name": "basketball" },
+          { "name": "Swimming" },
+          { "name": "Cycling" },
+          { "name": "Tennis" },
+          { "name": "Rugby" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Brands",
+    "category": [
+      {
+        "name": "Featured Brands",
+        "subCategories": [
+          { "img": "./images/brands/adidas-logo.svg" },
+          { "img": "./images/brands/asics-logo.svg" },
+          { "img": "./images/brands/karrimor-logo.svg" },
+          { "img": "./images/brands/nb-logo.svg" },
+          { "img": "./images/brands/nike-logo.svg" },
+          { "img": "./images/brands/reebok-logo.svg" }
+        ]
+      },
+      {
+        "name": "Popular Brands",
+        "subCategories": [
+          { "name": "Adidas" },
+          { "name": "Asics" },
+          { "name": "Calvin Klein" },
+          { "name": "Jack and Jones" },
+          { "name": "New Balance" },
+          { "name": "Nike" },
+          { "name": "Puma" },
+          { "name": "Reebok" },
+          { "name": "Regatan" },
+          { "name": "All Brands" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sale",
+    "category": [
+      {
+        "name": "Shop by Gender",
+        "subCategories": [{ "name": "Male" }, { "name": "Female" }, { "name": "Kids" }]
+      }
+    ]
+  }]
