@@ -1,4 +1,11 @@
-import { Flex, Grid, GridItem, useBreakpointValue } from '@chakra-ui/react'
+import {
+  Text,
+  Flex,
+  Grid,
+  GridItem,
+  useBreakpointValue
+} from '@chakra-ui/react'
+import TitleBanner from './TitleBanner'
 
 export default function BannerHome() {
   const isWide = useBreakpointValue({
@@ -23,7 +30,16 @@ export default function BannerHome() {
           bgSize="100%"
           rowStart={{ base: 1, lg: 1 }}
           rowEnd={{ base: 3, lg: 3 }}
-        ></GridItem>
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <TitleBanner
+            size="large"
+            description="Choose the ideal look for you"
+            link="Women"
+          />
+        </GridItem>
         <GridItem
           rowSpan={1}
           colSpan={1}
@@ -35,7 +51,12 @@ export default function BannerHome() {
           colEnd={{ base: 2, md: 2, lg: 2 }}
           rowStart={{ base: 3, lg: 1 }}
           rowEnd={{ base: 4, lg: 2 }}
-        ></GridItem>
+          display="flex"
+          flexDirection="column"
+          justifyContent="flex-end"
+        >
+          <TitleBanner size="small" link="Men" />
+        </GridItem>
         <GridItem
           rowSpan={1}
           colSpan={1}
@@ -47,7 +68,12 @@ export default function BannerHome() {
           colEnd={{ base: 2, md: 3, lg: 2 }}
           rowStart={{ base: 4, md: 3, lg: 2 }}
           rowEnd={{ base: 5, md: 4, lg: 3 }}
-        ></GridItem>
+          display="flex"
+          flexDirection="column"
+          justifyContent="flex-end"
+        >
+          <TitleBanner size="small" link="Kids" />
+        </GridItem>
       </Grid>
     </Flex>
   )

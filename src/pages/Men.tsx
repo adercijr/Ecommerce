@@ -3,7 +3,7 @@ import BannerHome from '../components/BannerHome'
 import Header from '../components/Header'
 import Menu from '../components/Menu'
 
-export default function Home() {
+export default function Men() {
   const isWide = useBreakpointValue({
     base: false,
     md: true
