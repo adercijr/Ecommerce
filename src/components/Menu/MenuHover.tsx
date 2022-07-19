@@ -12,7 +12,7 @@ export default function MenuHover({ data }) {
   return (
     <Flex
       position="absolute"
-      top="50px"
+      top="43px"
       left="0px"
       w="100%"
       maxW="1680px"

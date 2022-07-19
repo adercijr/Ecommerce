@@ -1,37 +1,49 @@
 import { Button, Flex } from '@chakra-ui/react'
 import Link from 'next/link'
 import path from 'path'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MenuHover from './MenuHover'
 
 type MenuItemsProps = {
-  nav: {
-    id: number
-    name: string
-    category:
-      | {
-          name: string
-          subCategories: {
-            img: string
-          }[]
-        }
-      | {
-          name: string
-        }
-  }
+  data:
+    | {
+        id: number
+        name: string
+        category?: undefined
+      }
+    | {
+        id: number
+        name: string
+        category: (
+          | {
+              name: string
+              subCategories: {
+                img: string
+              }[]
+            }
+          | {
+              name: string
+              subCategories: {
+                name: string
+              }[]
+            }
+        )[]
+      }
 }
 
-export default function MenuItems({ nav }: MenuItemsProps) {
+export default function MenuItems({ data }: MenuItemsProps) {
   const [hover, setHover] = useState(null)
 
-  const pathName = window.location.pathname
-  function isCurrentPath(id) {
-    if (pathName == `/${id}`) {
-      return true
-    } else if (pathName == '/' && id == 'Home') {
-      return true
-    } else {
-      return false
+  function isCurrentPath(id): boolean {
+    if (typeof window !== 'undefined') {
+      const pathName = window.location.pathname
+      if (pathName == `/${id}`) {
+        return true
+      } else if (pathName == '/' && id == 'Home') {
+        return true
+      } else {
+        return false
+      }
     }
   }
 
@@ -41,13 +53,13 @@ export default function MenuItems({ nav }: MenuItemsProps) {
   }
   return (
     <Flex
-      key={nav.id}
+      key={data.id}
       justify="center"
       align="center"
-      onMouseEnter={() => handleHover(nav)}
+      onMouseEnter={() => handleHover(data)}
       onMouseLeave={() => setHover(null)}
     >
-      <Link href={nav.name != 'Home' ? nav.name : '/'}>
+      <Link href={data.name != 'Home' ? data.name : '/'}>
         <Button
           fontSize="0.95rem"
           variant="unstyled"
@@ -62,15 +74,15 @@ export default function MenuItems({ nav }: MenuItemsProps) {
           }}
           textTransform="uppercase"
           fontWeight={600}
-          color={nav.name === 'Sale' ? 'red.600' : 'black'}
-          borderBottom={isCurrentPath(nav.name) ? '2px' : ''}
-          borderBottomColor={isCurrentPath(nav.name) ? 'red.400' : ''}
+          color={data.name === 'Sale' ? 'red.600' : 'black'}
+          borderBottom={isCurrentPath(data.name) ? '2px' : ''}
+          borderBottomColor={isCurrentPath(data.name) ? 'red.400' : ''}
         >
-          {nav.name}
+          {data.name}
         </Button>
       </Link>
 
-      {hover === nav.id && <MenuHover data={nav} />}
+      {hover === data.id && <MenuHover data={data} />}
     </Flex>
   )
 }

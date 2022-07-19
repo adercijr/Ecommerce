@@ -20,20 +20,22 @@ export default function Header() {
   }
 
   return (
-    <>
-      <Flex align="center" justify="space-between" w="100%" maxW="1680px">
+    <Flex w="100%" bg="white" justify="center" position="fixed" zIndex={200}>
+      <Flex
+        align="center"
+        justify="space-between"
+        w="100%"
+        maxW="1680px"
+        h="5rem"
+        px={4}
+        bg="white"
+      >
         {!isWide && (
           <Button onClick={handleMenu}>
             <Icon as={RiMenuLine} w={6} h={6} />
           </Button>
         )}
-        <Image
-          src="./images/theme/logo.png"
-          w={['5rem', '5rem', '8rem']}
-          mt={3}
-          mx={6}
-          mb={['5px', '5px', '0px']}
-        />
+        <Image src="./images/theme/logo.png" h="80%" mx={6} />
         {isWide && <InputSearch />}
         <MenuHeader />
       </Flex>
@@ -45,6 +47,6 @@ export default function Header() {
         zIndex={100}
         blur={1.5}
       />
-    </>
+    </Flex>
   )
 }

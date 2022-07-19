@@ -5,7 +5,7 @@ import { IoLocationOutline } from 'react-icons/io5'
 
 export default function MenuHeader() {
   return (
-    <Flex mr={4}>
+    <Flex>
       <IconButton
         icon={<Icon as={IoLocationOutline} w={6} h={6} />}
         aria-label="Location"

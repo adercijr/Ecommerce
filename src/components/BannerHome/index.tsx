@@ -13,12 +13,20 @@ export default function BannerHome() {
     lg: true
   })
   return (
-    <Flex w="100%" maxW="1680px">
+    <Flex
+      w="100%"
+      h="400px"
+      height={{ base: '75rem', md: '70rem', lg: '50rem', xl: '65rem' }}
+    >
       <Grid
         templateColumns={['1fr', '1fr', '1fr 1fr', '55% 1fr']}
-        templateRows={{ base: '1fr 1fr 1fr 1fr ' }}
+        templateRows={{
+          base: '1fr 1fr 1fr',
+          sm: '1fr 1fr 1fr 1fr',
+          md: '1fr 1fr 1fr',
+          lg: '1fr 1fr '
+        }}
         width="100%"
-        height={isWide ? '75rem' : '75rem'}
         gap={1}
       >
         <GridItem
