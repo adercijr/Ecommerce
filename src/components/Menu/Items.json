@@ -30,7 +30,7 @@
         ]
       },
       {
-        "name": "Footwear",
+        "name": "Clothing",
         "subCategories": [
           { "name": "T-shirts and Tops" },
           { "name": "Shorts" },
@@ -91,7 +91,7 @@
         ]
       },
       {
-        "name": "Footwear",
+        "name": "Clothing",
         "subCategories": [
           { "name": "T-shirts and Tops" },
           { "name": "Shorts" },
@@ -152,7 +152,7 @@
         ]
       },
       {
-        "name": "Footwear",
+        "name": "Clothing",
         "subCategories": [
           { "name": "T-shirts and Tops" },
           { "name": "Shorts" },
@@ -277,10 +277,15 @@
   {
     "id": 7,
     "name": "Sale",
-    "category": [
-      {
-        "name": "Shop by Gender",
-        "subCategories": [{ "name": "Male" }, { "name": "Female" }, { "name": "Kids" }]
-      }
-    ]
+        "genders": [
+          { "img": "./images/sale-man.jpg",
+            "name": "man"
+           },
+          { "img": "./images/sale-woman.jpg",
+            "name": "woman"
+        },
+          { "img": "./images/sale-kid.jpg",
+            "name": "kids"
+        }
+        ]
   }]

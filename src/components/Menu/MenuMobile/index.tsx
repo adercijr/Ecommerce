@@ -36,7 +36,7 @@ export default function MenuMobile({ isMenuOpen }: MenuMobileInterface) {
             justifyContent="flex-start"
             fontSize="1.2rem"
             textTransform="uppercase"
-            color={cat.name === 'Sale' ? 'red.600' : 'black'}
+            color={cat.name === 'Sale' ? 'cyan.600' : 'black'}
           >
             {cat.name}
           </Button>

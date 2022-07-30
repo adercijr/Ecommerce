@@ -5,13 +5,14 @@ import { RiMenuLine } from 'react-icons/ri'
 import { ReactDimmer } from 'react-dimmer'
 import { useState } from 'react'
 import MenuMobile from '../Menu/MenuMobile'
+import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setMenu] = useState(false)
 
   const isWide = useBreakpointValue({
     base: false,
-    md: true
+    lg: true
   })
 
   const handleMenu = () => {
@@ -28,14 +29,20 @@ export default function Header() {
         maxW="1680px"
         h="5rem"
         px={4}
-        bg="white"
       >
         {!isWide && (
-          <Button onClick={handleMenu}>
+          <Button onClick={handleMenu} zIndex={202}>
             <Icon as={RiMenuLine} w={6} h={6} />
           </Button>
         )}
-        <Image src="./images/theme/logo.png" h="80%" mx={6} />
+        <Link href={'/'}>
+          <Image
+            cursor="pointer"
+            src="./images/theme/logo.png"
+            h="80%"
+            mx={6}
+          />
+        </Link>
         {isWide && <InputSearch />}
         <MenuHeader />
       </Flex>

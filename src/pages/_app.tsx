@@ -1,6 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../styles/theme'
 import '../styles/toggle.css'
+import '../styles/Swiper.css'
+import '../styles/SwiperProduct.css'
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -1,0 +1,59 @@
+.swiper-scrollbar-drags {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 147, 147, 0.493);
+  border-radius: 10px;
+  left: 0;
+  top: 0px;
+  cursor: pointer;
+}
+.swiper-scrollbar-drags:active,  
+.swiper-scrollbar-drags:hover, 
+.swiper-scrollbar:active, 
+.swiper-scrollbar:hover {
+  height: 5px!important;
+  
+}
+.swiper-horizontal  {
+  
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  direction: 'column';
+  
+}
+
+.swiper-scrollbar-horizontal {
+  width: 50%!important;
+  
+}
+.swiper-scrollbar, .swiper-scrollbar-horizontal {
+  left: auto!important;
+  right: auto!important;
+  height: 2px!important;
+  transition: height 0.1s!important;
+}
+
+.swiper-scrollbar {
+  background: rgba(0,0,0,.14)!important;
+}
+.swiper-wrapper {
+  margin-left: calc(2% + 1.8rem);
+  margin-right: calc(2% + 1.8rem);
+  padding-right: 5px;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 0.5rem;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0.5rem;
+}
+
+.swiper-slide {
+  margin-left: 4px;
+  margin-right: 5px!important;
+  width: auto!important;
+}

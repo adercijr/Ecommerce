@@ -1,7 +1,6 @@
-import { Button, Flex } from '@chakra-ui/react'
+import { Text, Flex } from '@chakra-ui/react'
 import Link from 'next/link'
-import path from 'path'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import MenuHover from './MenuHover'
 
 type MenuItemsProps = {
@@ -29,9 +28,10 @@ type MenuItemsProps = {
             }
         )[]
       }
+  hide: boolean
 }
 
-export default function MenuItems({ data }: MenuItemsProps) {
+export default function MenuItems({ data, hide }: MenuItemsProps) {
   const [hover, setHover] = useState(null)
 
   function isCurrentPath(id): boolean {
@@ -49,7 +49,6 @@ export default function MenuItems({ data }: MenuItemsProps) {
 
   function handleHover(e) {
     setHover(e.id)
-    console.log(hover)
   }
   return (
     <Flex
@@ -59,30 +58,46 @@ export default function MenuItems({ data }: MenuItemsProps) {
       onMouseEnter={() => handleHover(data)}
       onMouseLeave={() => setHover(null)}
     >
-      <Link href={data.name != 'Home' ? data.name : '/'}>
-        <Button
+      <Link href={data.name != 'Home' ? data.name : '/'} passHref>
+        <Flex
+          bg="white"
+          direction="column"
+          cursor="pointer"
           fontSize="0.95rem"
-          variant="unstyled"
-          height="100%"
-          padding={2}
-          mx={4}
-          borderRadius="0"
-          border="2px"
-          borderColor="transparent"
-          _hover={{
-            borderBottom: '2px'
-          }}
+          paddingRight={3}
+          paddingLeft={3}
+          paddingTop="5px"
+          mx={2}
           textTransform="uppercase"
           fontWeight={600}
-          color={data.name === 'Sale' ? 'red.600' : 'black'}
-          borderBottom={isCurrentPath(data.name) ? '2px' : ''}
-          borderBottomColor={isCurrentPath(data.name) ? 'red.400' : ''}
+          color={data.name === 'Sale' ? 'cyan.600' : 'black'}
+          align="center"
         >
-          {data.name}
-        </Button>
+          <Text>{data.name}</Text>
+
+          <Flex
+            w={
+              isCurrentPath(data.name) && !hover
+                ? '120%'
+                : hover
+                ? '120%'
+                : '0%'
+            }
+            h="2px"
+            mt="10px"
+            bg={
+              hover
+                ? 'cyan.400'
+                : '' || isCurrentPath(data.name)
+                ? 'cyan.400'
+                : ''
+            }
+            transition="all 0.5s"
+          ></Flex>
+        </Flex>
       </Link>
 
-      {hover === data.id && <MenuHover data={data} />}
+      {hover === data.id && <MenuHover data={data} hide={hide} />}
     </Flex>
   )
 }
