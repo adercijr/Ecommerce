@@ -3,12 +3,15 @@ import { theme } from '../styles/theme'
 import '../styles/toggle.css'
 import '../styles/Swiper.css'
 import '../styles/SwiperProduct.css'
+import { FiltersProvider } from '../providers/Filters'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <FiltersProvider>
+      <ChakraProvider resetCSS theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </FiltersProvider>
   )
 }
 

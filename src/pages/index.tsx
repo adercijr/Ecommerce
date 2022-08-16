@@ -6,23 +6,9 @@ import Banner from '../components/Home/Banner'
 import { GenderCard } from '../components/Home/Gender'
 import Carousel from '../components/Home/Carousel'
 import Footer from '../components/Footer'
+import MessageBanner from '../components/Home/MessageBanner'
 
 export default function Home() {
-  const [whell, setWhell] = useState(false)
-
-  function whelling(e) {
-    if (e > 0) {
-      setWhell(true)
-    } else {
-      setWhell(false)
-    }
-  }
-
-  const isWide = useBreakpointValue({
-    base: false,
-    lg: true
-  })
-
   const data = [
     {
       id: 1,
@@ -92,16 +78,10 @@ export default function Home() {
   ]
 
   return (
-    <Flex
-      m="auto"
-      direction="column"
-      align="center"
-      onWheel={(e) => whelling(e.deltaY)}
-      w="100%"
-    >
+    <Flex m="auto" direction="column" align="center" w="100%">
       <Header />
-      <Flex w="100%" gap={2} pt="5rem">
-        {isWide && <Menu hide={whell} />}
+      <Flex w="100%" m="auto" direction="column" mt="5rem">
+        <MessageBanner />
         <Banner />
       </Flex>
 

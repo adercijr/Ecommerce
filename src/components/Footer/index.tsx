@@ -8,13 +8,10 @@ import {
   Text
 } from '@chakra-ui/react'
 import Image from 'next/image'
-import { useState } from 'react'
 import { FiHeart, FiTwitter } from 'react-icons/fi'
 import { GrFacebook, GrInstagram } from 'react-icons/gr'
 
 export default function Footer() {
-  const [isFocused, setIsFocused] = useState(false)
-
   return (
     <Flex
       h={{ sm: '1000px', md: '700px', lg: '450px' }}

@@ -27,29 +27,27 @@ type dataProps = {
             }
         )[]
       }
-  hide: boolean
 }
 
-export default function MenuHover({ data, hide }: dataProps) {
+export default function MenuHover({ data }: dataProps) {
   return (
     <Flex
       position="fixed"
-      top="126px"
+      top="67px"
       left="0px"
       w="100vw"
-      bg="white"
       justify="center"
       zIndex={200}
-      display={hide ? 'none' : ''}
       boxShadow="2xl"
+      bg="white"
     >
       {data.category && (
         <Grid
           px={8}
-          py={8}
+          py="3.5rem"
           templateColumns="repeat(5, 1fr)"
           gap={10}
-          maxW="1280px"
+          maxW="1680px"
           margin="auto"
           bg="white"
         >
@@ -104,12 +102,11 @@ export default function MenuHover({ data, hide }: dataProps) {
       )}
 
       {data.genders && (
-        <Flex px={8} py={8} maxW="1280px" margin="auto">
+        <Flex py={8} maxW="1680px" w="100%" justify="center" gap={4}>
           {data.genders.map((item) => (
             <Flex
-              w="30rem"
-              h="18rem"
-              mx="6px"
+              w="31%"
+              h={{ sm: '15rem', md: '20rem', lg: '17rem', xl: '25rem' }}
               direction="column"
               cursor="pointer"
             >

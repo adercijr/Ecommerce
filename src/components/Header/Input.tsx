@@ -11,18 +11,12 @@ import { useState } from 'react'
 export default function InputSearch() {
   const [inputValue, setInputValue] = useState('')
   return (
-    <Flex
-      border="1px"
-      borderRadius="6px"
-      borderColor="gray.300"
-      maxW="500px"
-      w="100%"
-    >
+    <Flex border="1px" borderRadius="6px" borderColor="gray.300" w="100%">
       <InputGroup maxW="500px">
         <Input
           onChange={(e) => setInputValue(e.target.value)}
           value={inputValue}
-          placeholder="Search product or"
+          placeholder="Search your product "
           size="sm"
           variant="unstyled"
           borderColor="gray.300"

@@ -6,18 +6,25 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import Image from 'next/image'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 type ProductCardProps = {
   data: {
     id: number
     brand: string
     description: string
+    category: string
+    type: string
+    activity: string
     variants: {
       id: number
       src: string
       price: number
-      discount: number
+      sizes: {
+        size: number
+        inventory: number
+        discount: number
+      }[]
     }[]
   }
 }
@@ -75,13 +82,17 @@ export default function ProductCard({ data }: ProductCardProps) {
   }
 
   // This sets the dimensions on the first render
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(test_dimensions, RESET_TIMEOUT)
     window.addEventListener('resize', () => {
       clearInterval(movement_timer)
       movement_timer = setTimeout(test_dimensions, RESET_TIMEOUT)
     })
   }, [])
+
+  const getMaxDiscount = currentProdut.sizes.reduce(function (prev, current) {
+    return prev.discount > current.discount ? prev : current
+  })
 
   return (
     <Flex w="100%" h="100%" direction="column" bg="white" align="center">
@@ -118,6 +129,7 @@ export default function ProductCard({ data }: ProductCardProps) {
                     as="button"
                     position="relative"
                     onMouseEnter={() => setCurrentProduct(card)}
+                    onMouseLeave={() => console.log()}
                   >
                     <Image src={card.src} layout="fill" />
                   </Box>
@@ -138,18 +150,18 @@ export default function ProductCard({ data }: ProductCardProps) {
           </Text>
         </Flex>
         <Flex w="100%" py={2}>
-          {currentProdut.discount == 0 && (
+          {getMaxDiscount.discount == 0 && (
             <Flex>
               <Text fontWeight={700}>£ {currentProdut.price}</Text>
             </Flex>
           )}
-          {currentProdut.discount > 0 && (
+          {getMaxDiscount.discount > 0 && (
             <Flex gap={3}>
               <Text fontWeight={700} color="cyan.700">
                 £{' '}
                 {(
                   currentProdut.price -
-                  (currentProdut.price * currentProdut.discount) / 100
+                  (currentProdut.price * getMaxDiscount.discount) / 100
                 ).toFixed(2)}
               </Text>
               <Flex fontWeight={400} fontSize="0.8rem" gap={1}>

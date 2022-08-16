@@ -1,11 +1,7 @@
-import { Button, Flex, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Button, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 
 export default function Banner() {
-  const isWide = useBreakpointValue({
-    base: false,
-    lg: true
-  })
   return (
     <Flex
       w="100%"
@@ -13,7 +9,6 @@ export default function Banner() {
       justify="center"
       position="relative"
       align="center"
-      mt={{ sm: '0px', lg: '52px' }}
     >
       <Image
         src="/images/bannerHome/image1.webp"

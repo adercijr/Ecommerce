@@ -28,10 +28,9 @@ type MenuItemsProps = {
             }
         )[]
       }
-  hide: boolean
 }
 
-export default function MenuItems({ data, hide }: MenuItemsProps) {
+export default function MenuItems({ data }: MenuItemsProps) {
   const [hover, setHover] = useState(null)
 
   function isCurrentPath(id): boolean {
@@ -60,17 +59,16 @@ export default function MenuItems({ data, hide }: MenuItemsProps) {
     >
       <Link href={data.name != 'Home' ? data.name : '/'} passHref>
         <Flex
-          bg="white"
           direction="column"
           cursor="pointer"
           fontSize="0.95rem"
-          paddingRight={3}
-          paddingLeft={3}
-          paddingTop="5px"
-          mx={2}
+          mx={1}
           textTransform="uppercase"
           fontWeight={600}
           color={data.name === 'Sale' ? 'cyan.600' : 'black'}
+          h="100%"
+          px="1rem"
+          justify="end"
           align="center"
         >
           <Text>{data.name}</Text>
@@ -78,9 +76,9 @@ export default function MenuItems({ data, hide }: MenuItemsProps) {
           <Flex
             w={
               isCurrentPath(data.name) && !hover
-                ? '120%'
+                ? '100%'
                 : hover
-                ? '120%'
+                ? '100%'
                 : '0%'
             }
             h="2px"
@@ -97,7 +95,7 @@ export default function MenuItems({ data, hide }: MenuItemsProps) {
         </Flex>
       </Link>
 
-      {hover === data.id && <MenuHover data={data} hide={hide} />}
+      {hover === data.id && <MenuHover data={data} />}
     </Flex>
   )
 }

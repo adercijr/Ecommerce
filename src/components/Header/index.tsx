@@ -6,6 +6,7 @@ import { ReactDimmer } from 'react-dimmer'
 import { useState } from 'react'
 import MenuMobile from '../Menu/MenuMobile'
 import Link from 'next/link'
+import Menu from '../Menu'
 
 export default function Header() {
   const [isMenuOpen, setMenu] = useState(false)
@@ -29,6 +30,7 @@ export default function Header() {
         maxW="1680px"
         h="5rem"
         px={4}
+        gap={2}
       >
         {!isWide && (
           <Button onClick={handleMenu} zIndex={202}>
@@ -43,7 +45,10 @@ export default function Header() {
             mx={6}
           />
         </Link>
-        {isWide && <InputSearch />}
+        <Flex h="50px" w="50%" justify="start">
+          <Menu />
+        </Flex>
+        <Flex w="30%">{isWide && <InputSearch />}</Flex>
         <MenuHeader />
       </Flex>
 
